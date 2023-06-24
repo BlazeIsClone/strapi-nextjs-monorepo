@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "strapi develop",
-    "start": "npm run build && strapi start",
+    "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi"
   },

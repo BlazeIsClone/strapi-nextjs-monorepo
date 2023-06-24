@@ -5,13 +5,8 @@
   ],
   "pipeline": {
     "build": {
-      "dependsOn": [
-        "^build"
-      ],
-      "outputs": [
-        ".next/**",
-        "!.next/cache/**"
-      ]
+      "cache": false,
+      "persistent": true
     },
     "lint": {},
     "dev": {
