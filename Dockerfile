@@ -8,7 +8,7 @@ COPY package*.json .
 
 COPY . .
 
-RUN npm ci
+RUN npm ci --only=production
 
 RUN npm install --arch=arm64 --platform=linuxmusl sharp
 
