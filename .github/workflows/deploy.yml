@@ -35,5 +35,5 @@ jobs:
           username: ${{ secrets.REMOTE_USERNAME }}
           key: ${{ secrets.REMOTE_SSH_PRIVATE_KEY }}
           script: |
-            docker-compose down
-            docker-compose up -d
+            cd {{ vars.REMOTE_PATH }} && docker-compose down
+            cd {{ vars.REMOTE_PATH }} && docker-compose up -d
