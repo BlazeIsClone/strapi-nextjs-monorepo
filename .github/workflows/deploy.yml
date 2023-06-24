@@ -26,7 +26,7 @@ jobs:
         run: |
           rsync -r --delete-after \
           $GITHUB_WORKSPACE/ \
-          ${{ secrets.REMOTE_USERNAME }}@${{ vars.REMOTE_HOST }}:{{ vars.REMOTE_PATH }}
+          ${{ secrets.REMOTE_USERNAME }}@${{ vars.REMOTE_HOST }}:${{ vars.REMOTE_PATH }}
 
       - name: SSH into Remote Server
         uses: appleboy/ssh-action@master
@@ -35,5 +35,5 @@ jobs:
           username: ${{ secrets.REMOTE_USERNAME }}
           key: ${{ secrets.REMOTE_SSH_PRIVATE_KEY }}
           script: |
-            cd {{ vars.REMOTE_PATH }} && docker-compose down
-            cd {{ vars.REMOTE_PATH }} && docker-compose up -d
+            cd ${{ vars.REMOTE_PATH }} && docker-compose down
+            cd ${{ vars.REMOTE_PATH }} && docker-compose up -d
