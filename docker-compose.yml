@@ -1,20 +1,6 @@
 version: '3.9'
 
 services:
-  nginx:
-    image: nginx:alpine
-    container_name: nginx
-    tty: true
-    restart: unless-stopped
-    depends_on:
-      - turbo
-      - postgres
-    ports:
-      - 8060:80
-      - 463:443
-    networks:
-      - public
-
   turbo:
     container_name: turbo
     build:
