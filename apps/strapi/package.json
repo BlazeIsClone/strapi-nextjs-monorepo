@@ -4,8 +4,8 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "strapi develop",
-    "start": "strapi start",
-    "build": "strapi build",
+    "start": "ENV_PATH=./env.prod strapi start",
+    "build": "ENV_PATH=./env.prod strapi build",
     "strapi": "strapi"
   },
   "dependencies": {
