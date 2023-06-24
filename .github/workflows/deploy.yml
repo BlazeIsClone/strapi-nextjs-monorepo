@@ -25,6 +25,7 @@ jobs:
       - name: Rsync to Remote Server
         run: |
           rsync -r --delete-after \
+          -e 'ssh -o StrictHostKeyChecking=no' \
           $GITHUB_WORKSPACE/ \
           ${{ secrets.REMOTE_USERNAME }}@${{ vars.REMOTE_HOST }}:${{ vars.REMOTE_PATH }}
 
