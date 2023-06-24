@@ -1,4 +1,5 @@
 {
+  "name": "strapi-nextjs-monorepo",
   "private": true,
   "scripts": {
     "build": "turbo run build",
@@ -13,7 +14,6 @@
     "prettier": "^2.5.1",
     "turbo": "latest"
   },
-  "name": "strapi-nextjs-monorepo",
   "packageManager": "npm@8.19.2",
   "workspaces": [
     "apps/*",
