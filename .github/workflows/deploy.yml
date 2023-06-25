@@ -16,6 +16,7 @@ jobs:
       - name: Install Dependencies
         run: |
           npm ci --only=production
+          npm install turbo --global
           npm run build
 
       - name: Set up SSH key
