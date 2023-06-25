@@ -37,5 +37,5 @@ jobs:
           username: ${{ secrets.REMOTE_USERNAME }}
           key: ${{ secrets.REMOTE_SSH_PRIVATE_KEY }}
           script: |
-            cd ${{ vars.REMOTE_PATH }} && pm2 stop
+            cd ${{ vars.REMOTE_PATH }} && pm2 stop turbo
             cd ${{ vars.REMOTE_PATH }} && pm2 start
