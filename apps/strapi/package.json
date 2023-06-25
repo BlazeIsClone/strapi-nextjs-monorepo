@@ -4,15 +4,15 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "strapi develop",
-    "start": "ENV_PATH=./env.prod strapi start",
-    "build": "ENV_PATH=./env.prod strapi build",
+    "start": "strapi start",
+    "build": "strapi build",
     "strapi": "strapi"
   },
   "dependencies": {
     "@strapi/plugin-i18n": "4.11.2",
     "@strapi/plugin-users-permissions": "4.11.2",
     "@strapi/strapi": "4.11.2",
-    "pg": "^8.11.0"
+    "mysql2": "^3.4.1"
   },
   "strapi": {
     "uuid": "aa1bac5d-0a0e-4421-b2e5-263fe6a845f9"
