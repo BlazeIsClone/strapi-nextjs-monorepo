@@ -1,12 +1,12 @@
 ---
-name: Deploy
+name: Deploy Application
 
 on:
   push:
     branches: [main]
 
 jobs:
-  deploy:
+  Deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,7 +15,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          npm ci
+          npm ci --only=production
           npm run build
 
       - name: Set up SSH key
